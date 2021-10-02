@@ -14,6 +14,7 @@
 		D9169DE52708822B0085D346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9169DE42708822B0085D346 /* Assets.xcassets */; };
 		D9169DE82708822B0085D346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9169DE62708822B0085D346 /* LaunchScreen.storyboard */; };
 		D9169DF02708A8710085D346 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9169DEF2708A8710085D346 /* DataModel.swift */; };
+		D9169DF22708F7520085D346 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9169DF12708F7520085D346 /* StringExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D9169DE72708822B0085D346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9169DE92708822B0085D346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9169DEF2708A8710085D346 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		D9169DF12708F7520085D346 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,13 @@
 			children = (
 				D9169DDB270882290085D346 /* AppDelegate.swift */,
 				D9169DDD270882290085D346 /* SceneDelegate.swift */,
-				D9169DDF270882290085D346 /* ViewController.swift */,
 				D9169DE1270882290085D346 /* Main.storyboard */,
 				D9169DE42708822B0085D346 /* Assets.xcassets */,
 				D9169DE62708822B0085D346 /* LaunchScreen.storyboard */,
 				D9169DE92708822B0085D346 /* Info.plist */,
+				D9169DDF270882290085D346 /* ViewController.swift */,
 				D9169DEF2708A8710085D346 /* DataModel.swift */,
+				D9169DF12708F7520085D346 /* StringExt.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				D9169DDC270882290085D346 /* AppDelegate.swift in Sources */,
 				D9169DDE270882290085D346 /* SceneDelegate.swift in Sources */,
 				D9169DF02708A8710085D346 /* DataModel.swift in Sources */,
+				D9169DF22708F7520085D346 /* StringExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -72,6 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
+    
 }
 
 // confirm ViewController to UISearchBarDelegate protocol
@@ -79,12 +80,17 @@ extension ViewController: UISearchBarDelegate {
     
     // apply action after press search
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text?.lowercased() else {
+        guard let searchText = searchBar.text?.lowercased(),
+              let mobile_no = shipmentDataSucced["Mobile_no"]?.lowercased(),
+              let shipper_acc = shipmentDataSucced["Shipper_Acc"]?.lowercased(),
+              let country_id = shipmentDataSucced["Country_ID"]?.lowercased()
+        
+        else {
             return
         }
-        if  searchText.caseInsensitiveCompare(shipmentDataSucced["Mobile_no"] ?? "") == .orderedSame   ||
-            searchText.caseInsensitiveCompare(shipmentDataSucced["Shipper_Acc"] ?? "") == .orderedSame ||
-            searchText.caseInsensitiveCompare(shipmentDataSucced["Country_ID"] ?? "") == .orderedSame
+        if  mobile_no.containsOrContentOf(aString: searchText)   ||
+            shipper_acc.containsOrContentOf(aString: searchText) ||
+            country_id.containsOrContentOf(aString: searchText)
         {
             data[0] = "Mob. No: \(shipmentDataSucced["Mobile_no"] ?? "")"
             data[1] = "Custome Name:  \(shipmentDataSucced["Weight"] ?? "")"
