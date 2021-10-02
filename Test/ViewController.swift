@@ -88,16 +88,17 @@ extension ViewController: UISearchBarDelegate {
         else {
             return
         }
-        if  mobile_no.containsOrContentOf(aString: searchText)   ||
-            shipper_acc.containsOrContentOf(aString: searchText) ||
-            country_id.containsOrContentOf(aString: searchText)
+        
+        if  mobile_no.containsOrContentOf(searchText)   ||
+            shipper_acc.containsOrContentOf(searchText) ||
+            country_id.containsOrContentOf(searchText)
         {
-            data[0] = "Mob. No: \(shipmentDataSucced["Mobile_no"] ?? "")"
+            data[0] = "Mob. No: \(mobile_no)"
             data[1] = "Custome Name:  \(shipmentDataSucced["Weight"] ?? "")"
             data[2] = "Address: \(shipmentDataSucced["Country_ID"] ?? "")"
             data[3] = "Weight: \(shipmentDataSucced["Weight"] ?? "")"
-            data[4] = "Description: \(shipmentDataSucced["Country_ID"] ?? "")"
-            data[5] = "Shipper: \(shipmentDataSucced["Shipper_Acc"] ?? "")"
+            data[4] = "Description: \(country_id)"
+            data[5] = "Shipper: \(shipper_acc)"
             if shipmentDataSucced["editable"] == "false" {
                 data.append("COD: 5200")
                 data.append("AWBCharges: 50")
@@ -114,7 +115,7 @@ extension ViewController: UISearchBarDelegate {
 // confirm ViewController to UITableViewDelegate, UITableViewDataSource protocol
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
